@@ -9,7 +9,12 @@ Install “Markdown Sidebar” from the: Add-ons -> get Add-ons tab (here, in go
 ## Introduction  
 This project was made as a part of the [“Motion Planning for Robots”](http://acg.cs.tau.ac.il/projects “course website”) workshop in Tel-Aviv University, the department of CS, 2018, under the guidance of [Prof. Dan Halperin](http://acg.cs.tau.ac.il/danhalperin/homepage ).
 
-In this project, we created a framework for developing games of controlling real word robots in a competition between men and computer players. We also made two games using this framework, that can be played once the system is up. The system was developed with special emphasis on motion planning algorithms, and the games are meant to display the quality of the automated motion, in compercent to the human controlled one. We used the **Crazyflie drones**, **Optitrack** motion tracking system and various software (further details later in this document). 
+
+In this project, we created a framework for developing games of controlling real word robots in a competition between men and computer players. We also made two games using this framework, that can be played once the system is up. The system was developed with special emphasis on motion planning algorithms, and the games are meant to display the quality of the automated motion, in compercent to the human controlled one.
+
+ We used the **Crazyflie drones**, **Optitrack** motion tracking system and various software (further details later in this document). 
+
+
 This guide provides the links and instructions to the steps needed for setting up this project and playing the games. The proceeding [Developers Guide](https://github.com/yuvalailer/CrazyFlie/blob/master/README.md ) gives a deeper look into the software we wrote and can be usefull for creating your own games and framworks.
 
 ## Watch it in action:
