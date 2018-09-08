@@ -10,7 +10,7 @@ Install “Markdown Sidebar” from the: Add-ons -> get Add-ons tab (here, in go
 This project was made as a part of the [“Motion Planning for Robots”](http://acg.cs.tau.ac.il/projects “course website”) workshop in Tel-Aviv University, the department of CS, 2018, under the guidance of [Prof. Dan Halperin](http://acg.cs.tau.ac.il/danhalperin/homepage ).
 
 
-In this project, we created a framework for developing games of controlling real word robots in a competition between men and computer players. We also made two games using this framework, that can be played once the system is up. The system was developed with special emphasis on motion planning algorithms, and the games are meant to display the quality of the automated motion, in compercent to the human controlled one.
+In this project, we created a framework for developing games of controlling real world robots in a competition between men and computer players. We also made two games using this framework, that can be played once the system is up. The system was developed with special emphasis on motion planning algorithms, and the games are meant to display the quality of the automated motion, in compercent to the human controlled one.
 
  We used the **Crazyflie drones**, **Optitrack** motion tracking system and various software (further details later in this document). 
 
@@ -25,17 +25,90 @@ This guide provides the links and instructions to the steps needed for setting u
  - Hardware - OptiTrack, VM, Windows, Peripherals (Joystick, LED)
  - Software - Git
 2. Crazy Game
- - Capture the Flag  - goal, controls (keyboard), game modes, features (battery, drone safe zone…)
- - Catch’em all - goal, controls (joystick), game modes, features (LED...)
+ - Capture the Flag  - 2 players (men or machine), fly 2-4 dones in a competition to capture the rival’s flags.
+ - Catch’em all - 2 players (men or machine), taking turns flying one drone on a mission to capture all the targets in the shortest time.
  - How to run the game
-3. Disclaimer and thanks
+3. Disclaimer and Thanks
 
 # Installation and Prerequisites 
 ## Hardware
 Extend on, OptiTrack, VM, Windows, Peripherals (Joystick, LED), add images of needed hardware and links to useful sites if possible. See sent link to my previous project’s MD file to see how to add links, images, and how to place them in a table.
-
+This project strongly based on existing optical motion capture system from OptiTrack,
+Thus hardware from Optitrack is needed.
+Flex 3 capture cameras http://optitrack.com/products/flex-3/ .
+There isn’t fixed number of cameras required for the purpose of this project to work. The amount  depend on the the work area size, but in order the system to work at least 3 cameras have to be able to see all infrared markers related to an “rigid object” at any given moment.
+We had 6 cameras cover area about 1.5X1.5 meter, 0.5 meter above the ground.
+Infrared markers http://optitrack.com/products/motion-capture-markers/
+Optitrack Cameras able to identify object by the reflection of IR li from those IR markers.
+For example, 4 markers used for each Crazyflie 2.0 drone, each drone is consider as 1 “rigid object”.
+Calibration tools http://optitrack.com/products/tools/. We used CW-500 Calibration Wand Kit for calibrating the cameras and CS-200 Calibration Square to set (X, Y, Z) coordinates directions. Calibration process will be further details later in this document.
+Hardware key http://optitrack.com/products/keys/.
+Key is needed for Motive software to work.
+OptiHub 2.0 http://optitrack.com/products/optihub/
+All cameras connect to OptiHub device that connect to the PC running the VM.
+All of those hardware components and software can be bought together in the following link:
+http://optitrack.com/cart/?shopurl=http://optitrack.com/systems/.
+ 
+
+Other hardwares also needed.
+2/4 Crazyflie 2.0 drones https://www.bitcraze.io/crazyflie-2/.
+Arduino Joystick https://store.arduino.cc/grove-thumb-joystick
+Arduino LEDs (?)
+USB - RF antenna for communicating with Crazyflie drones.
+ VM:
+The project’s games framework depend on two software environments which one of them is bitcraze virtual machine image contain version of xubuntu-14.04.4 and Ros code, launch file, Yorgev code etc. taken from another project. This Image is unique and need to be download from: https://github.com/bitcraze/bitcraze-vm/releases/
+In our project the VM environment have the role of a server. The main game (on Windows) communicate with the VM over TCP and other code parts in the VM handle the communication with the drones.
+
+Windows:
+The second software environment is Windows 10, contain Motive software and
+files related to the game. Those files can be found here https://github.com/yuvalailer/CrazyFlie (without Motive software).
+
+
 # Software
- ## Git, dependencies, inviruments, how to install ...
+## Motive
+TODO
+ ## Git
+Our project is divided into five different Git repositories. Each one can be used by its own, but of course the parts were built to fit together, and therefore some adjustments will be necessary. In order to install the full framework, follow the steps provided in the installation guide.
+
+### Repositories:
+-  [CrazyGame Website](https://github.com/xqgex/CrazyFlie_Website)
+- [CrazyGame for Windows PC - GUI](https://github.com/xqgex/CrazyFlie)
+- [CrazyGame VM code - Communication with the drones](https://github.com/xqgex/CrazyFlie_ros ) 
+- [CrazyGame Arduino code - For joystick and led strips](https://github.com/xqgex/CrazyFlie_Arduino )
+- [CrazyGame Automatic player](https://github.com/xqgex/CrazyFlie_Autoplayer )
+
+## Dependencies:
+Different parts of the project are made using different inviruments and software dependencies. Best practise of using this project is following the installation guide, on a **Windows** computer strong enough to carry the simultaneous load of the VM and the GUI software, Which means **minimum 8 GB of RAM and virtualization capabilities**.
+Alternatively it is possible to use it in other configurations but we don’t offer additional support for it.
+
+## Installation Guide:
+Assuming:
+- you are using a Windows computer that meets the demands in the dependencies section - that the Optitrack + motive system is installed and ready to go.
+- that the Crazyflie antenna dongle is connected
+
+1. Download and install  [Oracle VirtualBox](https://www.virtualbox.org/ ) or alternative VM host software of your choice.
+2. Download the [linux kubuntu VM](https://www.virtualbox.org/ ) we supply in our git repository. It is based on the [original Crazyflie project VM](https://wiki.bitcraze.io/projects:virtualmachine:index ). You can move to the next steps while it is downloading. 
+3. Install [python 3.6](https://www.python.org/downloads/release/python-366/ ) on the windows PC.
+4. Install the needed Python dependencies by opening Windows CMD and typing: 
+```
+pip install shapely pyserial munch
+```
+5. Download and Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git ) on the Windows PC. 
+6.Clone the Windows-side repository by opening the now installed **Git bash** program, and typing in the command:
+```
+git clone https://github.com/xqgex/CrazyFlie
+```
+7. Import the downloaded VM from step 2, in the VM host software from step 1. You can use [this guide](https://docs.oracle.com/cd/E26217_01/E26796/html/qs-import-vm.html ).
+8. Set the following configuration ([How to guide](https://www.virtualbox.org/manual/ch03.html)) for the VM:
+At least 4 GB of RAM
+Network definitions of: TODO
+9. Start the VM, **password is “crazyflie”** 
+10. **optional:** if you wish to control the drone using an Arduino Joystick + LED targets, install the [arduino IDE](https://www.arduino.cc/en/Main/Software ), and clone/use the code from the - [CrazyGame Arduino code - For joystick and led strips](https://github.com/xqgex/CrazyFlie_Arduino ) repository.
+
+### You now have all you need to start the game. Move to the “How to run the game” part to start playing! 
+
+  
+
 
 # Crazy Game
 ## Capture the Flag  - goal, controls (keyboard), game modes, features (battery, drone safe zone…) 
