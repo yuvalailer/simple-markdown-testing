@@ -23,7 +23,7 @@ This guide provides the links and instructions for the steps needed in order to 
 
 ## Table of Content
 #### 1. Installation and Prerequisites 
-     a. Hardware - OptiTrack, VM, Windows, Peripherals (Joystick, LED)
+a. Hardware - OptiTrack, VM, Windows, Peripherals (Joystick, LED)
      
 b. Software - Git
 #### 2. Crazy Game
