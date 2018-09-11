@@ -22,14 +22,18 @@ This guide provides the links and instructions for the steps needed in order to 
 [![](https://github.com/yuvalailer/plant-watering-via-BLE/blob/master/video_image.jpeg)](https://youtu.be/z5ZcZOntGuo)
 
 ## Table of Content
-1. Installation and Prerequisites 
- - Hardware - OptiTrack, VM, Windows, Peripherals (Joystick, LED)
- - Software - Git
-2. Crazy Game
- - Capture the Flag  - 2 players (human or machine), fly 2-4 drones in a competition to capture the rival’s flags.
- - Catch’em all - 2 players (human or machine), taking turns flying one drone on a mission to capture all the targets in the shortest time.
- - How to run the game
-3. Thanks and Disclaimer
+#### 1. Installation and Prerequisites 
+     a. Hardware - OptiTrack, VM, Windows, Peripherals (Joystick, LED)
+     
+b. Software - Git
+#### 2. Crazy Game
+a. Capture the Flag  - 2 players (human or machine), fly 2-4 drones in a competition to capture the rival’s flags.
+ 
+b. Catch’em all - 2 players (human or machine), taking turns flying one drone on a mission to capture all the targets in the shortest time.
+     
+c. How to run the game
+
+#### 3. Thanks and Disclaimer
 
 # Installation and Prerequisites 
 ## Hardware
@@ -81,6 +85,7 @@ Motive is a the software used for controlling and processing the information rec
 - Its designated MAC address will be **E7E7E7E70X**.
 
 For example: 
+
     drone 3 will be called **crazyflie3** and have the address **E7E7E7E703**. 
     drone 15 will be called **crazyflie15** and have the address **E7E7E7E715**.
 
@@ -88,6 +93,7 @@ For example:
 - LED number X will be called **ledX** in Motive (as a ‘rigid body’).
 
 For example: 
+
     LED 3 will be called **led3**.  
     LED 15 will be called **led15**.
 
@@ -148,17 +154,27 @@ add relevant screenshots, icons and so on to make this part understandable
 ## How to run the game 
 After downloads all files related to the game both VM and Windows sides and after setting the drones and leds (optional) in Motive software follow those instructions to run the game.
 ### VM side:
-In CrazyFlie_ros/crazyflie_demo/scripts/ 
-‘python main.py crazyflie2 crazyflie3 led1 led2’
+In CrazyFlie_ros/crazyflie_demo/scripts/ folder, enter: 
+
+
+```
+python main.py crazyflie2 crazyflie3 led1 led2
+```
+
 Replace “crazyflie2 crazyflie3 led1 led2” with your drones and leds setup in Motive
 
-Then at the same folder
-‘python crazyGameVM.py’
+Then at the same folder, run:
 
+```
+python crazyGameVM.py
+```
 
 ### Windows side:
 In /CrazyFlie
-‘python crazyGame.py’ 
+
+```
+python crazyGame.py
+``` 
 Enjoy the game. 
 
 
