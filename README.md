@@ -79,12 +79,14 @@ Motive is a the software used for controlling and processing the information rec
 #### For Drones:
 - Drone number X will be called **crazyflieX** in Motive (as a ‘rigid body’).
 - Its designated MAC address will be **E7E7E7E70X**.
+
 For example: 
     drone 3 will be called **crazyflie3** and have the address **E7E7E7E703**. 
     drone 15 will be called **crazyflie15** and have the address **E7E7E7E715**.
 
 #### For LEDs:
 - LED number X will be called **ledX** in Motive (as a ‘rigid body’).
+
 For example: 
     LED 3 will be called **led3**.  
     LED 15 will be called **led15**.
