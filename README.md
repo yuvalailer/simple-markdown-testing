@@ -88,6 +88,7 @@ Motive is a the software used for controlling and processing the information rec
 For example: 
 
 drone 3 will be called **crazyflie3** and have the address **E7E7E7E703**. 
+
 drone 15 will be called **crazyflie15** and have the address **E7E7E7E715**.
 
 #### For LEDs:
@@ -114,8 +115,11 @@ Alternatively it is possible to use it in other configurations but we don’t of
 
 ## Installation Guide:
 Assuming:
-- you are using a Windows computer that meets the demands in the dependencies section - that the Optitrack + motive system is installed and ready to go.
-- that the Crazyflie antenna dongle is connected
+- you are using a Windows computer that meets the demands in the dependencies section.
+
+- that the Optitrack + motive system is installed and ready to go.
+
+- that the Crazyflie antenna dongle is connected.
 
 1. Download and install  [Oracle VirtualBox](https://www.virtualbox.org/ ) or alternative VM host software of your choice.
 2. Download the [linux kubuntu VM](https://www.virtualbox.org/ ) we supply in our git repository. It is based on the [original Crazyflie project VM](https://wiki.bitcraze.io/projects:virtualmachine:index ). You can move to the next steps while it is downloading. 
