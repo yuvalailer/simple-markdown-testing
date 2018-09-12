@@ -1,7 +1,7 @@
 # Crazy Game - User's Guide
 
 ## Introduction  
-This project was made as a part of the [“Motion Planning for Robots”](http://acg.cs.tau.ac.il/projects “course website”) workshop in Tel-Aviv University, the department of CS, 2018, under the guidance of [Prof. Dan Halperin
+This project was made as a part of the [Motion Planning for Robots](http://acg.cs.tau.ac.il/projects “course website”) workshop in Tel-Aviv University, the department of CS, 2018, under the guidance of [Prof. Dan Halperin
 ](http://acg.cs.tau.ac.il/danhalperin/homepage ).
 
 
