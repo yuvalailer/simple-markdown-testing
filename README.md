@@ -1,11 +1,5 @@
 # Crazy Game - User's Guide
 
-Useful markdown links:
-https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet 
-https://github.com/yuvalailer/plant-watering-via-BLE 
-Install “Markdown Sidebar” from the: Add-ons -> get Add-ons tab (here, in google docs)  to roughly see how your Markdown will look like. Mind that it looks better in Github
-
-
 ## Introduction  
 This project was made as a part of the [“Motion Planning for Robots”](http://acg.cs.tau.ac.il/projects “course website”) workshop in Tel-Aviv University, the department of CS, 2018, under the guidance of [Prof. Dan Halperin
 ](http://acg.cs.tau.ac.il/danhalperin/homepage ).
