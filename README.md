@@ -13,7 +13,7 @@ In this project, we created a framework for developing games of controlling real
 This guide provides the links and instructions for the steps needed in order to set up this project and play the games. The proceeding [Developers Guide](https://github.com/yuvalailer/CrazyFlie/blob/master/README.md ) gives a deeper look into the software we wrote and can be usefull for creating your own games and framworks.
 
 ## Watch it in action:
-[![](https://github.com/yuvalailer/CrazyFlie/blob/master/images/Video_image.jpg)](https://youtu.be/plqkzJyI7do)
+[![](https://github.com/yuvalailer/CrazyFlie/blob/master/images/Video_image_new.jpg)](https://youtu.be/plqkzJyI7do)
 
 ## Table of Content
 #### 1. Installation and Prerequisites 
