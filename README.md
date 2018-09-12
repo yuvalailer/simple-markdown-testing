@@ -130,7 +130,9 @@ git clone https://github.com/xqgex/CrazyFlie
 7. Import the downloaded VM from step 2, in the VM host software from step 1. You can use [this guide](https://docs.oracle.com/cd/E26217_01/E26796/html/qs-import-vm.html ).
 8. Set the following configuration ([“How To” guide](https://www.virtualbox.org/manual/ch03.html)) for the VM:
 - At least 4 GB of RAM
-- Network definitions of: TODO
+- static IP - 172.16.1.2
+- Network adapter attached to - “Host-Only adapter” (in the Virtualbox VM settings)
+ 
 9. Start the VM, **password is “crazyflie”**.
 10. **optional:** if you wish to control the drone using an Arduino Joystick + LED targets, install the [arduino IDE](https://www.arduino.cc/en/Main/Software ), and clone/use the code from the - [CrazyGame Arduino code - For joystick and led strips](https://github.com/xqgex/CrazyFlie_Arduino ) repository.
 
@@ -259,7 +261,7 @@ Enjoy the game.
 ## Thanks and Disclaimer 
 We would like to thank Prof. Dan Halperin and the staff of the course for their guidance, Yoni Mendel and the Advanced Control Systems Lab in TAU for hosting and supporting this project. Special Thanks to Yotam Gani and Orel Ben-Yeshai for their support and assistance. 
 
-#### We don't own any IP rights for the software, hardware, internet articles, manuals, images (found on google image search) or any other 3rd party component of this project, which may be subjected to any kind of copyrights. All activities in this project were made for educational purposes only.
+#### We don't own any IP rights for 3rd party components, such as software, hardware, internet articles, manuals, images (found on google image search) or any other 3rd party component of this project, which may be subjected to any kind of copyrights. All activities in this project were made for educational purposes only.
 
 
 
