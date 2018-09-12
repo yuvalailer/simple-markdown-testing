@@ -32,44 +32,37 @@ c. How to run the game
 
 # Installation and Prerequisites 
 ## Hardware
-This project strongly based on existing optical motion capture system from OptiTrack,
-Thus hardware from Optitrack is needed.
+#### Optitrack
 - [Flex 3 capture cameras](http://optitrack.com/products/flex-3/) .
-There isn’t fixed number of cameras required for the purpose of this project to work. The amount  depend on the the work area size, but in order the system to work at least 3 cameras have to be able to see all infrared markers related to an “rigid object” at any given moment.
-We had 6 cameras cover area about 1.5X1.5 meter, 0.5 meter above the ground.
-- [Infrared markers](http://optitrack.com/products/motion-capture-markers/)
-Optitrack Cameras able to identify object by the reflection of IR li from those IR markers.
+There is no standard number of needed cameras for this project to work. The amount  depend on the size of the “playing field”. A good “rule of thumb” at least 3 cameras have to be able to see all infrared markers related to a “rigid object” at any given moment.
+We had 6 cameras covering an area of about 1.5X1.5 meters, and up to 0.5 meter in the Z (upward) axis.
+- [Infrared markers](http://optitrack.com/products/motion-capture-markers/) - 
+Optitrack Cameras are able to identify objects by the reflection from the IR markers connected to the .
 For example, 4 markers used for each Crazyflie 2.0 drone, each drone is consider as 1 “rigid object”.
-- [Calibration tools](http://optitrack.com/products/tools/). We used CW-500 Calibration Wand Kit for calibrating the cameras and CS-200 Calibration Square to set (X, Y, Z) coordinates directions. Calibration process will be further details later in this document.
-- [Hardware key.](http://optitrack.com/products/keys/)
-Key is needed for Motive software to work.
-- [OptiHub 2.0](http://optitrack.com/products/optihub/)
-All cameras connect to OptiHub device that connect to the PC running the VM.
-All of those hardware components and software can be bought together in the following link:
-[Full system.](http://optitrack.com/cart/?shopurl=http://optitrack.com/systems/)
+- [Calibration tools](http://optitrack.com/products/tools/) - We used CW-500 Calibration Wand Kit for calibrating the cameras and CS-200 Calibration Square to set (X, Y, Z) coordinates directions. Calibration process will be further detailed later in this document.
+- [Hardware key.](http://optitrack.com/products/keys/) - a hardware key dongle is required for using the Motive software.
+- [OptiHub 2.0](http://optitrack.com/products/optihub/) - all cameras connect to OptiHub device, that connects them to the PC.
+All the hardware and software mentioned here can be bought together in the following [link](http://optitrack.com/cart/?shopurl=http://optitrack.com/systems/).
+
  
 
 Other required hardware.
-- [2/4 Crazyflie 2.0 drones.](https://www.bitcraze.io/crazyflie-2/)
+- [2/4 Crazyflie 2.0 drones](https://www.bitcraze.io/crazyflie-2/) - the set of drones we used in this project. 
 - [Arduino Joystick.](https://store.arduino.cc/grove-thumb-joystick)
-- WS2811 Controlled Leds for “Catch Them All” game.
-- USB - RF antenna for communicating with Crazyflie drones.
+- WS2811 Controlled Leds for the “Catch Them All” game.
+- USB - RF antenna for communicating with the Crazyflie drones.
 
 
-## VM:
-The project’s games framework depend on two software environments which one of them is bitcraze virtual machine image contain version of xubuntu-14.04.4 and Ros code, launch file necessary for the system to work. Taken from another project, this Image is unique and need to be download from [here.](https://github.com/bitcraze/bitcraze-vm/releases/).
+### The project’s games framework depend on two main software environments, which are:
+
+## The VM:
+- bitcraze virtual machine image, a xubuntu-14.04.4 linux VM already containing Ros code and launch files necessary for the system to work. adopted from another project, this Image is unique and has to be download from [here.](https://github.com/bitcraze/bitcraze-vm/releases/).
 
 
-
-In addition, VM contain game server-side codes for the game that can be found in CrazyGame VM code repository.
-
-
-
-As mentioned before,  VM environment have the role of a server. The main game (on Windows) communicate with the VM over TCP and other code parts in the VM handle the communication with the drones.
+As mentioned before, the VM acts as a server. The main game (on Windows) communicate with the VM over TCP connection and other code parts in the VM handle the communication with the drones.
 
 ## Windows:
-The second software environment is Windows 10, contain Motive software and
-files related to the game. Those files can be found in CrazyGame for Windows PC - GUI repository (without the motive software).
+The second software environment is Windows 10, which need to contain the Motive software and other files related to the game. These files can be found in CrazyGame for Windows PC - GUI repository (without the motive software).
 
 
 # Software
